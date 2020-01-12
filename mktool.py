@@ -2,6 +2,8 @@
 
 import sys, subprocess, getopt, os, re, json, xml.etree.ElementTree as ET
 
+target = sys.argv[1]
+
 class mktool:
 	def __init__(self, site):
 		self.site = site
@@ -102,8 +104,8 @@ class mktool:
 		self.counter = self.counter + 1 if self.reject == True else self.counter - 0
 		self.counter = self.counter + 1 if self.tlsv1 == True else self.counter - 0
 		self.counter = self.counter + 1 if self.tlsv11 == True else self.counter - 0
-		self.counter = self.counter + 0 if self.tlsv12 == True else self.counter - 1
-		self.counter = self.counter + 0 if self.tlsv13 == True else self.counter - 1
+		self.counter = self.counter + 1 if self.tlsv12 == False else self.counter - 0
+		self.counter = self.counter + 1 if self.tlsv13 == False else self.counter - 0
 		self.counter = self.counter + 1 if self.sslv2 == True else self.counter - 0
 		self.counter = self.counter + 1 if self.sslv3 == True else self.counter - 0
 		self.counter = self.counter + 1 if self.heartbleed == True else self.counter - 0
@@ -112,7 +114,7 @@ class mktool:
 		self.counter = self.counter + 1 if self.spoof == True else self.counter - 0
 
 	def rank2(self):
-		print(self.counter)
+		#print(self.counter)
 		a = self.counter * 10 / self.Grade
 		b = a * 100
 		c = self.Grade - b
@@ -147,7 +149,7 @@ class mktool:
 		subprocess.run(['sudo', 'rm', '-f', '/tmp/nmap.xml'])
 
 if __name__ == "__main__":
-	first = mktool("rocket.com")
+	first = mktool(target)
 	first.getip()
 	first.sslscanner()
 	first.jsonparser()
