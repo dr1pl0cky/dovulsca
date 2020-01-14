@@ -24,3 +24,5 @@ Dovulsca is a quick and dirty vulnerability scanner that will take the following
  **Usage**
  
  ![Example](/example.jpg)
+
+> python3 mktool.py
