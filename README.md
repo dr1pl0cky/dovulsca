@@ -29,6 +29,10 @@ Dovulsca is a quick and dirty vulnerability scanner that will take the following
 ```
 python3 dovulsca.py [Domain]
 ```
-Simple Eh?
+To Do list
 ---
+- [ ] Add colors and help menu 
+- [ ] Fix IP grabber func: when more that one IP appears for domain, it will break
+- [ ] Fix Grading: even though this is going away, still need to atleast make it more accurate for now
+- [ ] Fix Nmap and SSLyze func: seems like 3/10-ish times this will return shit/odd results. Need to make this more stable. Maybe it's the lack of stop between store/parse/del ? 
 
