@@ -7,6 +7,7 @@ Dovulsca is a quick and dirty vulnerability scanner that will take the following
 
   * SSLyze
   * Nmap
+  * Check if the domain is able to be spoofed (No SPF or DMARC)
   * CVE correlation via [nmap-vulners](https://github.com/vulnersCom/nmap-vulners)
   * Extremely rootimentary grading system (this will change in future releases)
   * Display results per domain in wanna-be pretty format
