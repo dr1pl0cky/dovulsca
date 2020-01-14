@@ -23,4 +23,4 @@ Dovulsca is a quick and dirty vulnerability scanner that will take the following
  
  **Usage**
  
- ![Example](/example.png)
+ ![Example](/example.PNG)
